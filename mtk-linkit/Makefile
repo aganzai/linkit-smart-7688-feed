@@ -28,7 +28,7 @@ define Package/mtk-linkit
 	+mtk-linkit-webui +mtk-sdk-wifi +tcpdump-mini
 
   CATEGORY:=Base system
-  DEFAULT:=y
+  DEFAULT:=n
 endef
 
 define Build/Prepare
