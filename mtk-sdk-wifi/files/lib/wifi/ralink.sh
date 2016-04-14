@@ -22,14 +22,14 @@ config wifi-device	radio0
 	option hwmode	$mode
 	option htmode	HT40
 	option channel  auto
-	option disabled	1
+	option disabled	0
 
 config wifi-iface ap
 	option device   radio0
 	option mode	ap
 	option network  lan
 	option ifname   $dev
-	option ssid	OpenWrt
+	option ssid	OpenWrt-test
 	option encryption none 
 
 config wifi-iface sta
@@ -37,11 +37,9 @@ config wifi-iface sta
 	option mode	sta
 	option network  wan
 	option ifname   $sta
-	option led 	mediatek:orange:wifi
-	option ssid	UplinkAp
-	option key	SecretKey
-	option encryption psk
-	option disabled	1
+	option ssid	@@@@@@@@
+	option key	1234567890
+	option encryption psk-mixed
 EOF
 }
 
