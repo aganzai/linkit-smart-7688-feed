@@ -1,0 +1,14 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2011 OpenWrt.org
+
+START=99
+[ -f "/etc/config/tempnetwork" ] || {
+	uci set network.lan.ipaddr=192.168.100.1
+#	uci add network interface
+	uci set network.wan=interface
+	uci set network.wan.proto=dhcp
+	uci commit network
+	touch /etc/config/tempnetwork
+	/etc/init.d/network restart
+}
+
