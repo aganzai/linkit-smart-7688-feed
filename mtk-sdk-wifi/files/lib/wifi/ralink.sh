@@ -29,8 +29,9 @@ config wifi-iface ap
 	option mode	ap
 	option network  lan
 	option ifname   $dev
-	option ssid	OpenWrt-test
-	option encryption none 
+	option ssid	@iotiotiotiot@
+	option key	1234567890
+	option encryption psk-mixed
 
 config wifi-iface sta
 	option device   radio0
